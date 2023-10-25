@@ -1435,7 +1435,7 @@
       "id": "LAYOUT_AQUA_HIDEOUT_B1F",
       "name": "AquaHideout_B1F_Layout",
       "width": 51,
-      "height": 24,
+      "height": 36,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/AquaHideout_B1F/border.bin",
