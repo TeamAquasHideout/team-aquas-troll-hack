@@ -409,7 +409,42 @@
 
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_TROLL_HACK_STATE",
+      "var_value": "2",
+      "script": "AquaHideout_BF1_ExplosionBallSparkle"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TROLL_HACK_STATE",
+      "var_value": "2",
+      "script": "AquaHideout_BF1_ExplosionBallSparkle"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TROLL_HACK_STATE",
+      "var_value": "2",
+      "script": "AquaHideout_BF1_ExplosionBallSparkle"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_TROLL_HACK_STATE",
+      "var_value": "2",
+      "script": "AquaHideout_BF1_ExplosionBallSparkle"
+    }
   ],
   "bg_events": [
 

@@ -17,6 +17,7 @@ AquaHideout_B1F_OnTransition:
 
 AquaHideout_IntroSequence::
 	lockall
+	setflag FLAG_EXPLOSION_BALL_TRIGGERED
 	setvar VAR_TROLL_HACK_STATE, 1
 	msgbox AquaHideout_IntroSpeech0, MSGBOX_DEFAULT
 	closemessage
@@ -73,7 +74,11 @@ AquaHideout_IntroCameraMove:
 
 
 AquaHideoutExplosionBall::
-	msgbox AquaHideout_B1F_Explosion, MSGBOX_DEFAULT
+	goto_if_set FLAG_EXPLOSION_BALL_TRIGGERED, AquaHideout_B1F_BallIfNotPrimed
+	msgbox AquaHideout_B1F_Explosion, MSGBOX_AUTOCLOSE
+	removeobject 30
+	dofieldeffect(FLDEFF_EXPLOSION)
+    waitfieldeffect(FLDEFF_EXPLOSION)
 	special DoSoftReset
 	release
 	end
@@ -81,10 +86,19 @@ AquaHideoutExplosionBall::
 AquaHideout_B1F_Explosion:
 	.string "A little Present from the Trick Room…$"
 
+AquaHideout_B1F_BallIfNotPrimed::
+	msgbox AquaHideout_B1F_BallIfNotPrimed_Text, MSGBOX_AUTOCLOSE
+	release
+	end
+
+AquaHideout_B1F_BallIfNotPrimed_Text:
+	.string "A plain Pokeball…$"
 
 AquaHideout_BF1_ArchieAtDesk::
 	faceplayer
 	msgbox AquaHideout_B1F_Text_ArchieAtDesk, MSGBOX_AUTOCLOSE
+	setvar VAR_TROLL_HACK_STATE, 2
+	clearflag FLAG_EXPLOSION_BALL_TRIGGERED
 	release
 	end
 
@@ -92,6 +106,14 @@ AquaHideout_B1F_Text_ArchieAtDesk::
 	.string "WHAT are you doing standing there?!\n"
 	.string "GET OUT! \p"
 	.string "And take that Item Ball with you!!!$"
+
+AquaHideout_BF1_ExplosionBallSparkle::
+	setvar VAR_0x8006, 0
+	dofieldeffectsparkle 21, 9, VAR_0x8006
+	waitfieldeffect FLDEFF_SPARKLE
+	setvar VAR_TROLL_HACK_STATE, 3
+	delay 10
+	return
 
 
 AquaHideout_B1F_EventScript_Grunt2::
