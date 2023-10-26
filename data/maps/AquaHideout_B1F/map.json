@@ -289,7 +289,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
-      "x": 31,
+      "x": 28,
       "y": 10,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -403,48 +403,26 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "AquaHideoutExplosionBall",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "x": 18,
+      "y": 2,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "AquaHideout_B1F_EventScript_GruntBlockExit",
+      "flag": "FLAG_HIDEOUT_GRUNTS_SECOND_POSITION"
     }
   ],
   "warp_events": [
 
   ],
   "coord_events": [
-    {
-      "type": "trigger",
-      "x": 23,
-      "y": 9,
-      "elevation": 0,
-      "var": "VAR_TROLL_HACK_STATE",
-      "var_value": "2",
-      "script": "AquaHideout_BF1_ExplosionBallSparkle"
-    },
-    {
-      "type": "trigger",
-      "x": 23,
-      "y": 12,
-      "elevation": 0,
-      "var": "VAR_TROLL_HACK_STATE",
-      "var_value": "2",
-      "script": "AquaHideout_BF1_ExplosionBallSparkle"
-    },
-    {
-      "type": "trigger",
-      "x": 23,
-      "y": 11,
-      "elevation": 0,
-      "var": "VAR_TROLL_HACK_STATE",
-      "var_value": "2",
-      "script": "AquaHideout_BF1_ExplosionBallSparkle"
-    },
-    {
-      "type": "trigger",
-      "x": 23,
-      "y": 10,
-      "elevation": 0,
-      "var": "VAR_TROLL_HACK_STATE",
-      "var_value": "2",
-      "script": "AquaHideout_BF1_ExplosionBallSparkle"
-    }
+
   ],
   "bg_events": [
 

@@ -98,6 +98,7 @@ AquaHideout_BF1_ArchieAtDesk::
 	faceplayer
 	msgbox AquaHideout_B1F_Text_ArchieAtDesk, MSGBOX_AUTOCLOSE
 	setvar VAR_TROLL_HACK_STATE, 2
+	call AquaHideout_BF1_ExplosionBallSparkle
 	clearflag FLAG_EXPLOSION_BALL_TRIGGERED
 	release
 	end
@@ -114,6 +115,16 @@ AquaHideout_BF1_ExplosionBallSparkle::
 	setvar VAR_TROLL_HACK_STATE, 3
 	delay 10
 	return
+
+
+AquaHideout_B1F_EventScript_GruntBlockExit::
+	faceplayer
+	msgbox AquaHideout_B1F_GruntBlockExit, MSGBOX_AUTOCLOSE
+	release
+	end
+
+AquaHideout_B1F_GruntBlockExit:
+	.string "Gotta talk to the Boss to be let out…$"
 
 
 AquaHideout_B1F_EventScript_Grunt2::
