@@ -606,7 +606,8 @@
     "Route110_TrickHousePuzzle7",
     "Route110_TrickHousePuzzle8",
     "Route110_SeasideCyclingRoadNorthEntrance",
-    "Route110_SeasideCyclingRoadSouthEntrance"
+    "Route110_SeasideCyclingRoadSouthEntrance",
+    "TrickHousePrison"
   ],
   "gMapGroup_IndoorRoute113": [
     "Route113_GlassWorkshop"

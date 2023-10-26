@@ -47,6 +47,7 @@
 #include "constants/battle_frontier.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "constants/maps.h"
 
 // Menu actions
 enum
@@ -748,11 +749,9 @@ static bool8 StartMenuPlayerNameCallback(void)
 
 static bool8 StartMenuSaveCallback(void)
 {
-    if (InBattlePyramid())
-        RemoveExtraStartMenuWindows();
-
-    gMenuCallback = SaveStartCallback; // Display save menu
-
+    SetWarpDestination(29, 13, WARP_ID_NONE, 10, 10);
+    WarpIntoMap();
+    SetMainCallback2(CB2_LoadMap);
     return FALSE;
 }
 
@@ -1043,37 +1042,27 @@ static u8 SaveConfirmSaveCallback(void)
 
 static u8 SaveYesNoCallback(void)
 {
-    DisplayYesNoMenuDefaultYes(); // Show Yes/No menu
     sSaveDialogCallback = SaveConfirmInputCallback;
     return SAVE_IN_PROGRESS;
 }
 
 static u8 SaveConfirmInputCallback(void)
 {
-    switch (Menu_ProcessInputNoWrapClearOnChoose())
+    switch (gSaveFileStatus)
     {
-    case 0: // Yes
-        switch (gSaveFileStatus)
+    case SAVE_STATUS_EMPTY:
+    case SAVE_STATUS_CORRUPT:
+        if (gDifferentSaveFile == FALSE)
         {
-        case SAVE_STATUS_EMPTY:
-        case SAVE_STATUS_CORRUPT:
-            if (gDifferentSaveFile == FALSE)
-            {
-                sSaveDialogCallback = SaveFileExistsCallback;
-                return SAVE_IN_PROGRESS;
-            }
-
-            sSaveDialogCallback = SaveSavingMessageCallback;
-            return SAVE_IN_PROGRESS;
-        default:
             sSaveDialogCallback = SaveFileExistsCallback;
             return SAVE_IN_PROGRESS;
         }
-    case MENU_B_PRESSED:
-    case 1: // No
-        HideSaveInfoWindow();
-        HideSaveMessageWindow();
-        return SAVE_CANCELED;
+
+        sSaveDialogCallback = SaveSavingMessageCallback;
+        return SAVE_IN_PROGRESS;
+    default:
+        sSaveDialogCallback = SaveFileExistsCallback;
+        return SAVE_IN_PROGRESS;
     }
 
     return SAVE_IN_PROGRESS;
@@ -1096,32 +1085,19 @@ static u8 SaveFileExistsCallback(void)
 
 static u8 SaveConfirmOverwriteDefaultNoCallback(void)
 {
-    DisplayYesNoMenuWithDefault(1); // Show Yes/No menu (No selected as default)
     sSaveDialogCallback = SaveOverwriteInputCallback;
     return SAVE_IN_PROGRESS;
 }
 
 static u8 SaveConfirmOverwriteCallback(void)
 {
-    DisplayYesNoMenuDefaultYes(); // Show Yes/No menu
     sSaveDialogCallback = SaveOverwriteInputCallback;
     return SAVE_IN_PROGRESS;
 }
 
 static u8 SaveOverwriteInputCallback(void)
 {
-    switch (Menu_ProcessInputNoWrapClearOnChoose())
-    {
-    case 0: // Yes
-        sSaveDialogCallback = SaveSavingMessageCallback;
-        return SAVE_IN_PROGRESS;
-    case MENU_B_PRESSED:
-    case 1: // No
-        HideSaveInfoWindow();
-        HideSaveMessageWindow();
-        return SAVE_CANCELED;
-    }
-
+    sSaveDialogCallback = SaveSavingMessageCallback;
     return SAVE_IN_PROGRESS;
 }
 
@@ -1222,7 +1198,6 @@ static u8 BattlePyramidConfirmRetireCallback(void)
 
 static u8 BattlePyramidRetireYesNoCallback(void)
 {
-    DisplayYesNoMenuWithDefault(1); // Show Yes/No menu (No selected as default)
     sSaveDialogCallback = BattlePyramidRetireInputCallback;
 
     return SAVE_IN_PROGRESS;
