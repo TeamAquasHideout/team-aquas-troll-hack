@@ -17,7 +17,9 @@ AquaHideout_B1F_OnTransition:
 
 AquaHideout_IntroSequence::
 	lockall
+	setflag FLAG_SYS_B_DASH
 	setflag FLAG_EXPLOSION_BALL_TRIGGERED
+	givemon SPECIES_MUDKIP, 30, ITEM_MYSTIC_WATER
 	setvar VAR_TROLL_HACK_STATE, 1
 	msgbox AquaHideout_IntroSpeech0, MSGBOX_DEFAULT
 	closemessage
@@ -96,6 +98,7 @@ AquaHideout_B1F_BallIfNotPrimed_Text:
 
 AquaHideout_BF1_ArchieAtDesk::
 	faceplayer
+	setflag FLAG_HIDEOUT_BLOCK_EXIT
 	msgbox AquaHideout_B1F_Text_ArchieAtDesk, MSGBOX_AUTOCLOSE
 	setvar VAR_TROLL_HACK_STATE, 2
 	call AquaHideout_BF1_ExplosionBallSparkle
