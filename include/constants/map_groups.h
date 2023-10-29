@@ -284,6 +284,7 @@
 
 // gMapGroup_IndoorRoute116
 #define MAP_ROUTE116_TUNNELERS_REST_HOUSE (0 | (21 << 8))
+#define MAP_AQUA_WARP_HOUSE1              (1 | (21 << 8))
 
 // gMapGroup_IndoorRoute117
 #define MAP_ROUTE117_POKEMON_DAY_CARE (0 | (22 << 8))

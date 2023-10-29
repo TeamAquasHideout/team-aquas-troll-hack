@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_TrickHousePuzzle",
       "border_filepath": "data/layouts/TrickHousePrison/border.bin",
       "blockdata_filepath": "data/layouts/TrickHousePrison/map.bin"
+    },
+    {
+      "id": "LAYOUT_AQUA_WARP_HOUSE1",
+      "name": "AquaWarpHouse1_Layout",
+      "width": 16,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/AquaWarpHouse1/border.bin",
+      "blockdata_filepath": "data/layouts/AquaWarpHouse1/map.bin"
     }
   ]
 }

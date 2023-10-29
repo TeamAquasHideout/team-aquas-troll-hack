@@ -314,7 +314,8 @@
     "Route114_LanettesHouse"
   ],
   "gMapGroup_IndoorRoute116": [
-    "Route116_TunnelersRestHouse"
+    "Route116_TunnelersRestHouse",
+    "AquaWarpHouse1"
   ],
   "gMapGroup_IndoorRoute117": [
     "Route117_PokemonDayCare"
