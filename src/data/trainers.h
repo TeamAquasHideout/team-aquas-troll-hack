@@ -8700,15 +8700,15 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_PARTY(sParty_GruntMagmaHideout9),
     },
 
-    [TRAINER_GRUNT_MAGMA_HIDEOUT_10] =
+    [TRAINER_TRICK_ROOM_FIRST_FIGHT] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_MAGMA,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MAGMA,
-        .trainerPic = TRAINER_PIC_MAGMA_GRUNT_M,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_ELITE_FOUR,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+        .trainerPic = TRAINER_PIC_GENTLEMAN,
+        .trainerName = _("Trickster"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
+        .aiFlags = AI_FLAG_OMNISCIENT,
         .party = TRAINER_PARTY(sParty_GruntMagmaHideout10),
     },
 

@@ -20,6 +20,22 @@ Route116_OnFrame:
 	map_script_2 VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_EndEventAndCleanup_1
 	.2byte 0
 
+Route116_OnTreeTriggerScript::
+	lockall
+	setvar VAR_TEMP_4, 1
+	removeobject 3
+	addobject 4
+	applymovement 4, Common_Movement_FaceRight
+	waitmovement 0
+	setobjectxy 4, 55, 14
+	trainerbattle_single TRAINER_TRICK_ROOM_FIRST_FIGHT, Route116_TrickRoomGuy1, Route116_TrickRoomGuy1
+	releaseall
+	end
+
+Route116_TrickRoomGuy1:
+	.string "HAH! Think again!\p"
+	.string "I'll wipe the floor with you!$"
+
 
 Route116_RemoveRock::
 	setmetatile 62, 14, METATILE_General_MOUNTAIN_TOP_LABEL, FALSE

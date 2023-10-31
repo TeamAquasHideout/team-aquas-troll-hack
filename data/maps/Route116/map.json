@@ -107,9 +107,9 @@
       "x": 56,
       "y": 14,
       "elevation": 0,
-      "var": "VAR_TEMP_MIXED_RECORDS",
+      "var": "VAR_TEMP_4",
       "var_value": "0",
-      "script": "NULL"
+      "script": "Route116_OnTreeTriggerScript"
     }
   ],
   "bg_events": [

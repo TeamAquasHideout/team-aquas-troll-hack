@@ -6,6 +6,7 @@ AquaHideout_B2F_MapScripts::
 	.byte 0
 
 AquaHideout_B2F_OnTransition:
+	setrespawn HEAL_LOCATION_AQUA_HIDEOUT
 	call_if_set FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, AquaHideout_B2F_EventScript_PreventMattNoticing
 	end
 

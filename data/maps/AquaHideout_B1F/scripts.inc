@@ -19,7 +19,7 @@ AquaHideout_IntroSequence::
 	lockall
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_EXPLOSION_BALL_TRIGGERED
-	givemon SPECIES_MUDKIP, 30, ITEM_MYSTIC_WATER
+	givemon SPECIES_MUDKIP, 10, ITEM_MYSTIC_WATER
 	setvar VAR_TROLL_HACK_STATE, 1
 	msgbox AquaHideout_IntroSpeech0, MSGBOX_DEFAULT
 	closemessage

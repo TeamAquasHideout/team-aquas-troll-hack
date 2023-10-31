@@ -9168,9 +9168,19 @@ static const struct TrainerMon sParty_GruntMagmaHideout9[] = {
 
 static const struct TrainerMon sParty_GruntMagmaHideout10[] = {
     {
-    .lvl = 29,
-    .species = SPECIES_MIGHTYENA,
-    }
+        .species = SPECIES_ARCEUS,
+        .ball = ITEM_MASTER_BALL,
+        .ability = ABILITY_NO_GUARD,
+        .friendship = 42,
+        .heldItem = ITEM_ASSAULT_VEST,
+        .isShiny = TRUE,
+        .iv = TRAINER_PARTY_IVS(25,26,27,28,29,30),
+        .ev = TRAINER_PARTY_EVS(252, 0, 0, 252, 4, 0),
+        .lvl = 100,
+        .moves = {MOVE_SHEER_COLD, MOVE_FISSURE, MOVE_GUILLOTINE, MOVE_BUBBLE},
+        .nature = TRAINER_PARTY_NATURE(NATURE_HASTY),
+        .nickname = COMPOUND_STRING("Bill")
+    },
 };
 
 static const struct TrainerMon sParty_GruntMagmaHideout11[] = {
