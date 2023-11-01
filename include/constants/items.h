@@ -925,7 +925,7 @@
 #define ITEM_TELEPORT_TOOL 807
 #define ITEM_SWEETSCENT_TOOL 808
 
-#define ITEMS_COUNT ITEM_SWEETSCENT_TOOL
+#define ITEMS_COUNT ITEM_SWEETSCENT_TOOL + 1
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

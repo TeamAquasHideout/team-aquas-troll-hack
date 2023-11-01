@@ -36,6 +36,7 @@
 #include "item_menu.h"
 #include "constants/map_types.h"
 #include "constants/party_menu.h"
+#include "pokemon.h"
 
 static u8 CreateUseToolTask(void);
 static void Task_UseTool_Init(u8);
@@ -670,10 +671,20 @@ void ClearFieldMoveFlags(void)
 
 static bool32 PartyCanLearnMoveLevelUp(u16 species, u16 moveId)
 {
+    u16 to_move;
+    u16 to_level;
+    u32 move_id;
     u32 i = 0;
-    for (i = 0; gLevelUpLearnsets[species][i] != LEVEL_UP_END; i++)
-    {
-        if ((gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_ID) == moveId)
+    for (i = 0; i < 60; i++)
+    {   
+        to_move = gLevelUpLearnsets[species][i].move;
+        to_level = gLevelUpLearnsets[species][i].level;
+        move_id = (to_move << 8) || to_level;
+
+        if (move_id == LEVEL_UP_END)
+            return FALSE;
+        
+        if ((move_id & LEVEL_UP_MOVE_ID) == moveId)
             return TRUE;
     }
     return FALSE;
@@ -695,18 +706,11 @@ bool32 PartyHasMonLearnsKnowsFieldMove(u16 itemId)
         if (species == SPECIES_NONE)
             break;
 
-        monCanLearnTM = CanMonLearnTMTutor(mon,itemId,0);
+        monCanLearnTM = CanMonLearnTMTutor(mon,itemId,moveId);
         if ((PartyCanLearnMoveLevelUp(species, moveId)
                 || (monCanLearnTM) == ALREADY_KNOWS_MOVE)
                 || (monCanLearnTM) == CAN_LEARN_MOVE)
             SetMonResultVariables(i,species);
-
-        for (i = 0; i < TUTOR_MOVE_COUNT; i++)
-        {
-            monCanLearnTutor = CanMonLearnTMTutor(mon, 0, i);
-            if (monCanLearnTutor == ALREADY_KNOWS_MOVE || monCanLearnTutor == CAN_LEARN_MOVE)
-                SetMonResultVariables(i,species);
-        }
     }
     return FALSE;
 }

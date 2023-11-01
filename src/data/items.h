@@ -9655,7 +9655,6 @@ const struct Item gItems[] =
     [ITEM_CUT_TOOL] =
     {
         .name = _("Cut Tool"),
-        .itemId = ITEM_CUT_TOOL,
         .price = 0,
         .importance = 1,
         .description = sCutToolDesc,
@@ -9667,7 +9666,6 @@ const struct Item gItems[] =
     [ITEM_FLY_TOOL] =
     {
         .name = _("Fly Tool"),
-        .itemId = ITEM_FLY_TOOL,
         .price = 0,
         .importance = 1,
         .description = sFlyToolDesc,
@@ -9679,7 +9677,6 @@ const struct Item gItems[] =
     [ITEM_SURF_TOOL] =
     {
         .name = _("Surf Tool"),
-        .itemId = ITEM_SURF_TOOL,
         .price = 0,
         .importance = 1,
         .description = sSurfToolDesc,
@@ -9691,7 +9688,6 @@ const struct Item gItems[] =
     [ITEM_STRENGTH_TOOL] =
     {
         .name = _("Strength Tool"),
-        .itemId = ITEM_STRENGTH_TOOL,
         .price = 0,
         .importance = 1,
         .description = sStrengthToolDesc,
@@ -9703,7 +9699,6 @@ const struct Item gItems[] =
     [ITEM_FLASH_TOOL] =
     {
         .name = _("Flash Tool"),
-        .itemId = ITEM_FLASH_TOOL,
         .price = 0,
         .importance = 1,
         .description = sFlashToolDesc,
@@ -9715,7 +9710,6 @@ const struct Item gItems[] =
     [ITEM_ROCKSMASH_TOOL] =
     {
         .name = _("RockSmashTool"),
-        .itemId = ITEM_ROCKSMASH_TOOL,
         .price = 0,
         .importance = 1,
         .description = sRockSmashToolDesc,
@@ -9727,7 +9721,6 @@ const struct Item gItems[] =
     [ITEM_WATERFALL_TOOL] =
     {
         .name = _("WaterfallTool"),
-        .itemId = ITEM_WATERFALL_TOOL,
         .price = 0,
         .importance = 1,
         .description = sWaterfallToolDesc,
@@ -9739,7 +9732,6 @@ const struct Item gItems[] =
     [ITEM_DIVE_TOOL] =
     {
         .name = _("Dive Tool"),
-        .itemId = ITEM_DIVE_TOOL,
         .price = 0,
         .importance = 1,
         .description = sDiveToolDesc,
@@ -9751,7 +9743,6 @@ const struct Item gItems[] =
     [ITEM_TELEPORT_TOOL] =
     {
         .name = _("Teleport Tool"),
-        .itemId = ITEM_TELEPORT_TOOL,
         .price = 0,
         .importance = 1,
         .description = sTeleportToolDesc,
@@ -9763,7 +9754,6 @@ const struct Item gItems[] =
     [ITEM_SWEETSCENT_TOOL] =
     {
         .name = _("SweetScntTool"),
-        .itemId = ITEM_SWEETSCENT_TOOL,
         .price = 0,
         .importance = 1,
         .description = sSweetScentToolDesc,

@@ -20,6 +20,20 @@ Route116_OnFrame:
 	map_script_2 VAR_ROUTE116_TRICK_ROOM_GUY, 1, TrickRoomGuyExposition
 	.2byte 0
 
+BlockTrickRoomAttack::
+	setvar VAR_TEMP_4, 1
+	end
+
+ItemBallScript_Route116::
+	lockall
+	removeobject 1
+	setflag FLAG_ITEM_ROUTE_116_X_SPECIAL
+	setvar VAR_TROLL_HACK_STATE, 4
+	giveitem ITEM_CUT_TOOL, 1
+	waitbuttonpress
+	closemessage
+	end
+
 TrickRoomGuyExposition::
 	goto_if_set FLAG_TRICK_ROOM_GUY_EXPOSITION, SkipCutscene
 	setflag FLAG_TRICK_ROOM_GUY_EXPOSITION
