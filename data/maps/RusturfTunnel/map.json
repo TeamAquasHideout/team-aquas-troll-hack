@@ -180,7 +180,7 @@
       "dest_warp_id": "2"
     },
     {
-      "x": 18,
+      "x": 38,
       "y": 20,
       "elevation": 3,
       "dest_map": "MAP_ROUTE116",
@@ -199,7 +199,7 @@
     },
     {
       "type": "trigger",
-      "x": 18,
+      "x": 38,
       "y": 20,
       "elevation": 0,
       "var": "VAR_ROUTE116_TRICK_ROOM_GUY",
