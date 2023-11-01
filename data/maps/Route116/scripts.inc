@@ -17,8 +17,43 @@ Route116_OnLoad:
 	end
 
 Route116_OnFrame:
-	map_script_2 VAR_SHOULD_END_ABNORMAL_WEATHER, 1, AbnormalWeather_EventScript_EndEventAndCleanup_1
+	map_script_2 VAR_ROUTE116_TRICK_ROOM_GUY, 1, TrickRoomGuyExposition
 	.2byte 0
+
+TrickRoomGuyExposition::
+	goto_if_set FLAG_TRICK_ROOM_GUY_EXPOSITION, SkipCutscene
+	setflag FLAG_TRICK_ROOM_GUY_EXPOSITION
+	lockall
+	setvar VAR_ROUTE116_TRICK_ROOM_GUY, 2
+	applymovement 4, TrickRoomGuyExpoMovement
+	waitmovement 0
+	msgbox TrickRoomGuyExpositionText, MSGBOX_DEFAULT
+	setweather WEATHER_ABNORMAL
+	doweather
+	removeobject 4
+	releaseall
+	return
+
+SkipCutscene::
+	end
+
+TrickRoomGuyExpositionText:
+	.string "Those traps were nothing, even\n"
+	.string "a baby could crawl through them.\p"
+	.string "You are not prepared for what\n"
+	.string "is coming.\p"
+	.string "Team Aqua is going to pay for\n"
+	.string "what they did to me!$"
+
+TrickRoomGuyExpoMovement::
+	jump_2_down
+	jump_2_down
+	walk_down
+	walk_left
+	walk_left
+	face_up
+	step_end
+
 
 Route116_OnTreeTriggerScript::
 	lockall
@@ -485,4 +520,3 @@ Route116_Text_TrainerTipsBagHasPockets:
 	.string "placed in the appropriate POCKETS.\p"
 	.string "No TRAINER can afford to be without\n"
 	.string "a BAG of their own.$"
-

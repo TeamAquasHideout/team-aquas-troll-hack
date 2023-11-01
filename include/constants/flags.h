@@ -46,7 +46,7 @@
 #define FLAG_HIDEOUT_GRUNTS_SECOND_POSITION    0x21 // Unused Flag
 #define FLAG_EXPLOSION_BALL_TRIGGERED    0x22 // Unused Flag
 #define FLAG_HIDEOUT_BLOCK_EXIT    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
+#define FLAG_TRICK_ROOM_GUY_EXPOSITION    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag

@@ -18,6 +18,14 @@ RusturfTunnel_OnTransition:
 	call_if_eq VAR_RUSTURF_TUNNEL_STATE, 2, RusturfTunnel_EventScript_SetAquaGruntAndPeekoPos
 	end
 
+SetTrickRoomVarLeaving::
+	setvar VAR_ROUTE116_TRICK_ROOM_GUY, 0
+	end
+
+SetTrickRoomVar::
+	setvar VAR_ROUTE116_TRICK_ROOM_GUY, 1
+	end
+
 RusturfTunnel_EventScript_SetAquaGruntAndPeekoPos::
 	setobjectxyperm LOCALID_PEEKO, 13, 4
 	setobjectxyperm LOCALID_GRUNT, 13, 5
