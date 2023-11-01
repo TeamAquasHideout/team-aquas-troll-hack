@@ -844,6 +844,16 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_LINKING_CORD] = {gItemIcon_LinkingCord, gItemIconPalette_LinkingCord},
     [ITEM_PEAT_BLOCK] = {gItemIcon_PeatBlock, gItemIconPalette_PeatBlock},
     [ITEM_BERSERK_GENE] = {gItemIcon_BerserkGene, gItemIconPalette_BerserkGene},
+    [ITEM_CUT_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_FLY_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_SURF_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_STRENGTH_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_FLASH_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_ROCKSMASH_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_WATERFALL_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_DIVE_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_TELEPORT_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
+    [ITEM_SWEETSCENT_TOOL] = {gItemIcon_QuestionMark, gItemIconPalette_QuestionMark},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

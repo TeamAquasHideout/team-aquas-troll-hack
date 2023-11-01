@@ -914,7 +914,18 @@
 #define ITEM_PEAT_BLOCK 797
 #define ITEM_BERSERK_GENE 798
 
-#define ITEMS_COUNT 799
+#define ITEM_CUT_TOOL 799
+#define ITEM_FLY_TOOL 800
+#define ITEM_SURF_TOOL 801
+#define ITEM_STRENGTH_TOOL 802
+#define ITEM_FLASH_TOOL 803
+#define ITEM_ROCKSMASH_TOOL 804
+#define ITEM_WATERFALL_TOOL 805
+#define ITEM_DIVE_TOOL 806
+#define ITEM_TELEPORT_TOOL 807
+#define ITEM_SWEETSCENT_TOOL 808
+
+#define ITEMS_COUNT ITEM_SWEETSCENT_TOOL
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations
