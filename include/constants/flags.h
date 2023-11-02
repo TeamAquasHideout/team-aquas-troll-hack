@@ -48,9 +48,9 @@
 #define FLAG_HIDEOUT_BLOCK_EXIT    0x23 // Unused Flag
 #define FLAG_TRICK_ROOM_GUY_EXPOSITION    0x24 // Unused Flag
 #define FLAG_AQUA_HIDEOUT_TREE    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
+#define FLAG_FORCE_SAVE    0x26 // Unused Flag
+#define FLAG_HIDEOUT_B2F_EXPOSITION_SWAP_ONE    0x27 // Unused Flag
+#define FLAG_HIDEOUT_B2F_EXPOSITION_SWAP_TWO    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag

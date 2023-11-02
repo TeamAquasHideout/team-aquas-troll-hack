@@ -29,8 +29,8 @@ ItemBallScript_Route116::
 	removeobject 1
 	setflag FLAG_ITEM_ROUTE_116_X_SPECIAL
 	setvar VAR_TROLL_HACK_STATE, 4
+	setflag FLAG_FORCE_SAVE
 	giveitem ITEM_CUT_TOOL, 1
-	waitbuttonpress
 	closemessage
 	end
 

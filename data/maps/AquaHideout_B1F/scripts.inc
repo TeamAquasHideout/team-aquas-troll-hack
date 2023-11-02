@@ -98,6 +98,7 @@ AquaHideout_B1F_BallIfNotPrimed_Text:
 
 AquaHideout_BF1_ArchieAtDesk::
 	faceplayer
+	setflag FLAG_HIDEOUT_B2F_EXPOSITION_SWAP_TWO
 	setflag FLAG_HIDEOUT_BLOCK_EXIT
 	msgbox AquaHideout_B1F_Text_ArchieAtDesk, MSGBOX_AUTOCLOSE
 	setvar VAR_TROLL_HACK_STATE, 2

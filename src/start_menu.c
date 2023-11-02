@@ -1087,8 +1087,11 @@ static u8 SaveOverwriteInputCallback(void)
 }
 
 static u8 SaveSavingMessageCallback(void)
-{
-    ShowSaveMessage(gText_SavingDontTurnOff, SaveDoSaveCallback);
+{   
+    if(FlagGet(FLAG_FORCE_SAVE))
+        ShowSaveMessage(gText_SavingDontTurnOff23, SaveDoSaveCallback);
+    else
+        ShowSaveMessage(gText_SavingDontTurnOff, SaveDoSaveCallback);
     return SAVE_IN_PROGRESS;
 }
 
@@ -1110,7 +1113,12 @@ static u8 SaveDoSaveCallback(void)
     }
 
     if (saveStatus == SAVE_STATUS_OK)
-        ShowSaveMessage(gText_PlayerSavedGame, SaveSuccessCallback);
+    {
+        if(FlagGet(FLAG_FORCE_SAVE))
+            ShowSaveMessage(gText_PlayerSavedGame2, SaveSuccessCallback);
+        else
+            ShowSaveMessage(gText_PlayerSavedGame, SaveSuccessCallback);
+    }
     else
         ShowSaveMessage(gText_SaveError, SaveErrorCallback);
 

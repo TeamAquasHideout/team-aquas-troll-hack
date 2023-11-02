@@ -8,6 +8,9 @@ gText_AlreadySavedFile::
 gText_SavingDontTurnOff::
 	.string "Hehe…$"
 
+gText_SavingDontTurnOff23::
+	.string "We will save your progress…$"
+
 gText_PlayerSavedGame::
 	.string "Have fun! - Trick Room Guy$"
 
@@ -19,3 +22,7 @@ gText_SaveError::
 
 gText_SavingDontTurnOffPower::
 	.string "Hehe…$"
+	
+
+gText_PlayerSavedGame2::
+	.string "Saving Finished.$"
