@@ -93,7 +93,10 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125"
+    "Underwater_Route125",
+    "InfiniteCyclingRoad1",
+    "InfiniteCyclingRoad2",
+    "InfiniteCyclingRoad3"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -608,7 +611,8 @@
     "Route110_TrickHousePuzzle8",
     "Route110_SeasideCyclingRoadNorthEntrance",
     "Route110_SeasideCyclingRoadSouthEntrance",
-    "TrickHousePrison"
+    "TrickHousePrison",
+    "AquaWarpHouse2"
   ],
   "gMapGroup_IndoorRoute113": [
     "Route113_GlassWorkshop"

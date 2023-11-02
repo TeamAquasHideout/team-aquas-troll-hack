@@ -4430,6 +4430,46 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/AquaWarpHouse1/border.bin",
       "blockdata_filepath": "data/layouts/AquaWarpHouse1/map.bin"
+    },
+    {
+      "id": "LAYOUT_AQUA_WARP_HOUSE2",
+      "name": "AquaWarpHouse2_Layout",
+      "width": 16,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/AquaWarpHouse2/border.bin",
+      "blockdata_filepath": "data/layouts/AquaWarpHouse2/map.bin"
+    },
+    {
+      "id": "LAYOUT_INFINITE_CYCLING_ROAD1",
+      "name": "InfiniteCyclingRoad1_Layout",
+      "width": 41,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/InfiniteCyclingRoad1/border.bin",
+      "blockdata_filepath": "data/layouts/InfiniteCyclingRoad1/map.bin"
+    },
+    {
+      "id": "LAYOUT_INFINITE_CYCLING_ROAD2",
+      "name": "InfiniteCyclingRoad2_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/InfiniteCyclingRoad2/border.bin",
+      "blockdata_filepath": "data/layouts/InfiniteCyclingRoad2/map.bin"
+    },
+    {
+      "id": "LAYOUT_INFINITE_CYCLING_ROAD3",
+      "name": "InfiniteCyclingRoad3_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/InfiniteCyclingRoad3/border.bin",
+      "blockdata_filepath": "data/layouts/InfiniteCyclingRoad3/map.bin"
     }
   ]
 }

@@ -10,13 +10,9 @@ Route110_MapScripts::
 	.byte 0
 
 Route110_OnResume:
-	special UpdateCyclingRoadState
 	end
 
 Route110_OnTransition:
-	call Common_EventScript_SetupRivalGfxId
-	call Common_EventScript_SetupRivalOnBikeGfxId
-	call_if_eq VAR_CYCLING_CHALLENGE_STATE, 1, Route110_EventScript_SaveCyclingMusic
 	end
 
 Route110_EventScript_SaveCyclingMusic::
@@ -24,7 +20,6 @@ Route110_EventScript_SaveCyclingMusic::
 	return
 
 Route110_OnFrame:
-	map_script_2 VAR_CYCLING_CHALLENGE_STATE, 1, Route110_EventScript_BeginCylcingRoadChallenge
 	.2byte 0
 
 Route110_EventScript_BeginCylcingRoadChallenge::
