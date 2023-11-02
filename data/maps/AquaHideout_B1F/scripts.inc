@@ -97,7 +97,9 @@ AquaHideout_B1F_BallIfNotPrimed_Text:
 	.string "A plain Pokeball…$"
 
 AquaHideout_BF1_ArchieAtDesk::
+	lockall
 	faceplayer
+	goto_if_set FLAG_HIDEOUT_BLOCK_EXIT, AquaHideout_BF1_ArchieAtDesk_SecondScript
 	setflag FLAG_HIDEOUT_B2F_EXPOSITION_SWAP_TWO
 	setflag FLAG_HIDEOUT_BLOCK_EXIT
 	msgbox AquaHideout_B1F_Text_ArchieAtDesk, MSGBOX_AUTOCLOSE
@@ -107,10 +109,30 @@ AquaHideout_BF1_ArchieAtDesk::
 	release
 	end
 
+AquaHideout_BF1_ArchieAtDesk_SecondScript::
+	goto_if_set FLAG_ARCHIE_DIALOGUE_NUMBER_THREE, AquaHideout_BF1_ArchieAtDesk_ThirdScript
+	setflag FLAG_ARCHIE_DIALOGUE_NUMBER_THREE
+	msgbox AquaHideout_B1F_Text_ArchieAtDesk2, MSGBOX_AUTOCLOSE
+	release
+	end
+
+AquaHideout_BF1_ArchieAtDesk_ThirdScript::
+	msgbox AquaHideout_B1F_Text_ArchieAtDesk3, MSGBOX_AUTOCLOSE
+	release
+	end
+
 AquaHideout_B1F_Text_ArchieAtDesk::
 	.string "WHAT are you doing standing there?!\n"
 	.string "GET OUT! \p"
 	.string "And take that Item Ball with you!!!$"
+
+AquaHideout_B1F_Text_ArchieAtDesk2::
+	.string "If I have to tell you to leave one\n"
+	.string "time, you are going to be 20,000\l"
+	.string "leagues under the sea.$"
+
+AquaHideout_B1F_Text_ArchieAtDesk3::
+	.string "......$"
 
 AquaHideout_BF1_ExplosionBallSparkle::
 	setvar VAR_0x8006, 0

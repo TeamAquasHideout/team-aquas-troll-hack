@@ -51,7 +51,7 @@
 #define FLAG_FORCE_SAVE    0x26 // Unused Flag
 #define FLAG_HIDEOUT_B2F_EXPOSITION_SWAP_ONE    0x27 // Unused Flag
 #define FLAG_HIDEOUT_B2F_EXPOSITION_SWAP_TWO    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
+#define FLAG_ARCHIE_DIALOGUE_NUMBER_THREE    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag

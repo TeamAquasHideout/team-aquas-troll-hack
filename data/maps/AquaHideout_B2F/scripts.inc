@@ -44,8 +44,8 @@ ScientistGreetYouMovement_Text:
 
 ScientistGreetYouMovement_Text2:
 	.string "The warps to our mini-bases\n"
-	.string "around Hoenn have been sealed\l"
-	.string "off. We need help opening them.$"
+	.string "around Hoenn have been sealed off.\l"
+	.string "We need help opening them.$"
 
 ScientistGreetYouMovement_Text3:
 	.string "You can take a look around, but\n"
