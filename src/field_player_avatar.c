@@ -515,8 +515,15 @@ static bool8 ForcedMovement_PushedSouthByCurrent(void)
 }
 
 static bool8 ForcedMovement_PushedNorthByCurrent(void)
-{
-    return DoForcedMovement(DIR_NORTH, PlayerRideWaterCurrent);
+{   
+    if(JOY_HELD(DPAD_LEFT))
+        return DoForcedMovement(DIR_WEST, PlayerRideWaterCurrent);
+    else if (JOY_HELD(DPAD_RIGHT))
+        return DoForcedMovement(DIR_EAST, PlayerRideWaterCurrent);
+    else if (JOY_HELD(R_BUTTON))
+        return DoForcedMovement(DIR_SOUTH, PlayerRideWaterCurrent);
+    else 
+        return DoForcedMovement(DIR_NORTH, PlayerRideWaterCurrent);
 }
 
 static bool8 ForcedMovement_PushedWestByCurrent(void)

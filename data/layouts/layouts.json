@@ -255,7 +255,7 @@
       "id": "LAYOUT_ROUTE110",
       "name": "Route110_Layout",
       "width": 40,
-      "height": 100,
+      "height": 76,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Route110/border.bin",
@@ -4470,6 +4470,16 @@
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/InfiniteCyclingRoad3/border.bin",
       "blockdata_filepath": "data/layouts/InfiniteCyclingRoad3/map.bin"
+    },
+    {
+      "id": "LAYOUT_AQUA_WARP_HOUSE3",
+      "name": "AquaWarpHouse3_Layout",
+      "width": 16,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/AquaWarpHouse3/border.bin",
+      "blockdata_filepath": "data/layouts/AquaWarpHouse3/map.bin"
     }
   ]
 }

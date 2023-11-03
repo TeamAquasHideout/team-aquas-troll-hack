@@ -1072,3 +1072,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/InfiniteCyclingRoad2/scripts.inc"
 
 	.include "data/maps/InfiniteCyclingRoad3/scripts.inc"
+
+	.include "data/maps/AquaWarpHouse3/scripts.inc"
